@@ -4,7 +4,6 @@
  * Q1_02.java
  * 
  * Question:
- * 
  * Given two strings, write a method to decide if one is the permutation of other.
  * 
  */
@@ -13,10 +12,10 @@ package StringQuestions;
 import java.util.ArrayList;
 
 public class Q1_02 {
-	/*
+	/**
 	 * Method to check if two strings are permutation 
 	 * 
-	 * O(n^2) in case of string are palindrome (must search to end of values array each time)
+	 * Time Complexity: O(n^2) in case of string are palindrome (must search to end of values array each time)
 	 * 
 	 * @param 
 	 * @param str2
