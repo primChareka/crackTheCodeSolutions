@@ -1,7 +1,21 @@
 package StringQuestions;
 
+/**
+ * 
+ * @author primrosechareka
+ *
+ */
 public class Q1_04 {
 
+	/**
+	 * 
+	 * 
+	 * @param permu
+	 *            String of permutation
+	 * @param str
+	 *            String in question of being a palindrom of the permutation string
+	 * @return
+	 */
 	public static boolean isPalindromPermutation(String permu, String str) {
 		int[] letters = new int[256];
 		int length = permu.length();
@@ -10,18 +24,14 @@ public class Q1_04 {
 
 		if (permu == null || str == null) {
 			return false;
-		} else if (length != str.length()) {
+		} else if (!isPalindrom(permu)||length != str.length()) {
 			return false;
 		}
 
-		
 		// For even string only need to go through half length
 		if (length % 2 == 0) {
 			length /= 2;
-
-			
 			for (i = 0; i < length; i++) {
-				System.out.println(permu.charAt(i));
 				letters[permu.charAt(i)] += 2;
 			}
 
@@ -46,12 +56,26 @@ public class Q1_04 {
 		return true;
 	}
 
+	public static boolean isPalindrom(String str) {
+		int length = str.length();
+		str = str.toLowerCase();
+		int i;
+
+		for (i = 0; i < length / 2; i++) {
+			if (str.charAt(i) != str.charAt(length - 1 - i)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
 	public static void main(String[] args) {
 		System.out.println(Q1_04.isPalindromPermutation("tacocat", "ttacaoc"));
 		System.out.println(Q1_04.isPalindromPermutation("heyyeh", "yyeehh"));
 		System.out.println(Q1_04.isPalindromPermutation("heyyeh", "yyehh"));
 		System.out.println(Q1_04.isPalindromPermutation("heyyeh", "yyeshh"));
 		System.out.println(Q1_04.isPalindromPermutation("heYyeh", "yyeehh"));
+		System.out.println(Q1_04.isPalindromPermutation("heYyzh", "yyeehh"));
 	}
 
 }
