@@ -6,6 +6,7 @@ public class Q1_04 {
 		int[] letters = new int[256];
 		int length = permu.length();
 		int i = 0;
+		permu = permu.toLowerCase();
 
 		if (permu == null || str == null) {
 			return false;
@@ -13,11 +14,14 @@ public class Q1_04 {
 			return false;
 		}
 
+		
 		// For even string only need to go through half length
 		if (length % 2 == 0) {
 			length /= 2;
 
+			
 			for (i = 0; i < length; i++) {
+				System.out.println(permu.charAt(i));
 				letters[permu.charAt(i)] += 2;
 			}
 
@@ -47,6 +51,7 @@ public class Q1_04 {
 		System.out.println(Q1_04.isPalindromPermutation("heyyeh", "yyeehh"));
 		System.out.println(Q1_04.isPalindromPermutation("heyyeh", "yyehh"));
 		System.out.println(Q1_04.isPalindromPermutation("heyyeh", "yyeshh"));
+		System.out.println(Q1_04.isPalindromPermutation("heYyeh", "yyeehh"));
 	}
 
 }
