@@ -1,6 +1,20 @@
 package StringQuestions;
 
 /**
+ * Cracking-The-Coding-Interview
+ * Chapter 1 - Arrays and Strings
+ * Q1_04.java
+ * 
+ * Question:
+ * Given a string, write a function to check if it is a
+ * permutation of a palindrome. A palindrome is a word
+ * or phrase that is same forwards and backwards. A
+ * permutation is a rearrangement of letters. The palindrome
+ * does not need to be limited to just dictionary words.
+ * 
+ * EXAMPLE
+ * Input : Tact Coa
+ * Output : True (permutations : "taco cat", "atco cta", etc.) 
  * 
  * @author primrosechareka
  *
@@ -13,10 +27,13 @@ public class Q1_04 {
 	 * @param permu
 	 *            String of permutation
 	 * @param str
-	 *            String in question of being a palindrom of the permutation string
+	 *            String in question of being a palindrome of the permutation string
 	 * @return
-	 */
-	public static boolean isPalindromPermutation(String permu, String str) {
+	 * 		Returns true if the string in question is a palindrome of the first parameter.
+	 *		returns false otherwise. A false value is also returned if either value is null
+	 *		or if the first parameter is not a palindrome
+	 */	
+	public static boolean isPalindromePermutation(String permu, String str) {
 		int[] letters = new int[256];
 		int length = permu.length();
 		int i = 0;
@@ -24,7 +41,7 @@ public class Q1_04 {
 
 		if (permu == null || str == null) {
 			return false;
-		} else if (!isPalindrom(permu)||length != str.length()) {
+		} else if (!isPalindrome(permu)||length != str.length()) {
 			return false;
 		}
 
@@ -56,7 +73,7 @@ public class Q1_04 {
 		return true;
 	}
 
-	public static boolean isPalindrom(String str) {
+	public static boolean isPalindrome(String str) {
 		int length = str.length();
 		str = str.toLowerCase();
 		int i;
@@ -70,12 +87,12 @@ public class Q1_04 {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(Q1_04.isPalindromPermutation("tacocat", "ttacaoc"));
-		System.out.println(Q1_04.isPalindromPermutation("heyyeh", "yyeehh"));
-		System.out.println(Q1_04.isPalindromPermutation("heyyeh", "yyehh"));
-		System.out.println(Q1_04.isPalindromPermutation("heyyeh", "yyeshh"));
-		System.out.println(Q1_04.isPalindromPermutation("heYyeh", "yyeehh"));
-		System.out.println(Q1_04.isPalindromPermutation("heYyzh", "yyeehh"));
+		System.out.println(Q1_04.isPalindromePermutation("tacocat", "ttacaoc"));
+		System.out.println(Q1_04.isPalindromePermutation("heyyeh", "yyeehh"));
+		System.out.println(Q1_04.isPalindromePermutation("heyyeh", "yyehh"));
+		System.out.println(Q1_04.isPalindromePermutation("heyyeh", "yyeshh"));
+		System.out.println(Q1_04.isPalindromePermutation("heYyeh", "yyeehh"));
+		System.out.println(Q1_04.isPalindromePermutation("heYyzh", "yyeehh"));
 	}
 
 }
