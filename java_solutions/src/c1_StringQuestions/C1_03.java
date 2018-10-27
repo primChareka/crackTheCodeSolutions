@@ -15,7 +15,7 @@
  * Input: "Mr John Smith " J 13 
  * Output: "Mr%20John%20Smith"
  */
-package StringQuestions;
+package c1_StringQuestions;
 
 public class C1_03 {
 	

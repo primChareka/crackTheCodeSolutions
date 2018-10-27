@@ -22,7 +22,7 @@
  * Input: pale, bake
  * Output: false
  */
-package StringQuestions;
+package c1_StringQuestions;
 
 import java.util.ArrayList;
 

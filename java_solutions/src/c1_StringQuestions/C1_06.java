@@ -13,7 +13,7 @@
  * Input: "aabcccccaaa" 
  * Output: "a2b1c5a3"
  * */
-package StringQuestions;
+package c1_StringQuestions;
 
 public class C1_06 {
 	

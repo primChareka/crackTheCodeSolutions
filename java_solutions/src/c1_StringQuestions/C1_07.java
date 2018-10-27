@@ -2,7 +2,7 @@
  * Chapter 1 - Arrays and Strings
  * Q1_06.java
  */
-package StringQuestions;
+package c1_StringQuestions;
 
 public class C1_07 {
 

@@ -8,7 +8,7 @@
  * 
  */
 
-package StringQuestions;
+package c1_StringQuestions;
 import java.util.ArrayList;
 
 public class C1_02 {

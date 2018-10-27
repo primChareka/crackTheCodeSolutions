@@ -1,4 +1,4 @@
-package StringQuestions;
+package c1_StringQuestions;
 
 import java.util.HashMap;
 

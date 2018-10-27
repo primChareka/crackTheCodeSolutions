@@ -1,4 +1,4 @@
-package bigOQuestions;
+package c0_bigOQuestions;
 
 import java.util.Scanner;
 
