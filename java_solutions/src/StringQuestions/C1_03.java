@@ -17,7 +17,7 @@
  */
 package StringQuestions;
 
-public class Q1_03 {
+public class C1_03 {
 	
 /**
  * 

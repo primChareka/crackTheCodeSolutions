@@ -11,7 +11,7 @@
 package StringQuestions;
 import java.util.ArrayList;
 
-public class Q1_02 {
+public class C1_02 {
 	/**
 	 * Method to check if two strings are permutation 
 	 * 

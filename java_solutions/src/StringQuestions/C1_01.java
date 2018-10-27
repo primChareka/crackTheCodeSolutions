@@ -2,7 +2,7 @@ package StringQuestions;
 
 import java.util.HashMap;
 
-public class Q1_01 {
+public class C1_01 {
 
 	public static boolean isUnique(String string) {
 		HashMap<Integer, Character> map = new HashMap<Integer, Character>();
@@ -17,6 +17,6 @@ public class Q1_01 {
 
 	public static void main(String[] args) {
 		String string = "Primose";
-		System.out.println(Q1_01.isUnique(string));
+		System.out.println(C1_01.isUnique(string));
 	}
 }

@@ -26,7 +26,7 @@ package StringQuestions;
 
 import java.util.ArrayList;
 
-public class Q1_05 {
+public class C1_05 {
 	public static ArrayList<Character> stack = new ArrayList<Character>();
 	public static boolean oneEdit(String a, String b) {
 		if(a==null||b==null) {

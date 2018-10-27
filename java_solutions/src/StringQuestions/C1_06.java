@@ -1,6 +1,21 @@
+/**
+ * Cracking-The-Coding-Interview
+ * Chapter 1 - Arrays and Strings
+ * Q1_06.java
+ * 
+ * Implement a method to perform basic string compression
+ * using the count of repeated characters. If the sum compressed string
+ * does not become smaller then the original string, then your 
+ * method should return the original string. You can assume that
+ * the string has only upper case and lower case letters.
+ * 
+ * EXAMPLE
+ * Input: "aabcccccaaa" 
+ * Output: "a2b1c5a3"
+ * */
 package StringQuestions;
 
-public class Q1_06 {
+public class C1_06 {
 	
 	public static String compress(String str) {
 		StringBuilder string = new StringBuilder();

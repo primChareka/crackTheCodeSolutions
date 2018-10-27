@@ -3,7 +3,7 @@ package StringQuestions;
 /**
  * Cracking-The-Coding-Interview
  * Chapter 1 - Arrays and Strings
- * Q1_04.java
+ * C1_04.java
  * 
  * Question:
  * Given a string, write a function to check if it is a
@@ -19,7 +19,7 @@ package StringQuestions;
  * @author primrosechareka
  *
  */
-public class Q1_04 {
+public class C1_04 {
 
 	/**
 	 * 
@@ -87,12 +87,12 @@ public class Q1_04 {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(Q1_04.isPalindromePermutation("tacocat", "ttacaoc"));
-		System.out.println(Q1_04.isPalindromePermutation("heyyeh", "yyeehh"));
-		System.out.println(Q1_04.isPalindromePermutation("heyyeh", "yyehh"));
-		System.out.println(Q1_04.isPalindromePermutation("heyyeh", "yyeshh"));
-		System.out.println(Q1_04.isPalindromePermutation("heYyeh", "yyeehh"));
-		System.out.println(Q1_04.isPalindromePermutation("heYyzh", "yyeehh"));
+		System.out.println(C1_04.isPalindromePermutation("tacocat", "ttacaoc"));
+		System.out.println(C1_04.isPalindromePermutation("heyyeh", "yyeehh"));
+		System.out.println(C1_04.isPalindromePermutation("heyyeh", "yyehh"));
+		System.out.println(C1_04.isPalindromePermutation("heyyeh", "yyeshh"));
+		System.out.println(C1_04.isPalindromePermutation("heYyeh", "yyeehh"));
+		System.out.println(C1_04.isPalindromePermutation("heYyzh", "yyeehh"));
 	}
 
 }
