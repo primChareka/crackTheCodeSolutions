@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.NewTest">
+      <class name="test.c2_LinkedLists.C2_01Tests">
         <methods>
-          <include name="replace_valid1"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="removeUnsortedNoBufferTest"/>
         </methods>
-      </class> <!-- test.NewTest -->
+      </class> <!-- test.c2_LinkedLists.C2_01Tests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
