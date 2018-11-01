@@ -7,6 +7,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import c2_LinkedLists.Node;
+
 public class C4_00Tests {
 	private c4_TreesAndGraphs.Node root;
 	@BeforeMethod
@@ -33,10 +35,54 @@ public class C4_00Tests {
 		 *	5		3
 		 */
 	}
+	@Test
+	public void printBreadthFirstTest() {
+		ArrayList<c4_TreesAndGraphs.Node> result = new ArrayList<c4_TreesAndGraphs.Node>();
+		ArrayList<Integer> actual = new ArrayList<Integer>();
+		ArrayList<Integer> expected = new ArrayList<Integer>();
+		expected.add(15);
+		expected.add(9);
+		expected.add(7);
+		expected.add(4);
+		expected.add(19);
+		expected.add(12);
+		expected.add(5);
+		expected.add(3);
+		root.printBreadthFirst(result);
+		
+		while(!result.isEmpty()) {
+			actual.add(result.remove(0).getVal());
+		}
+		Assert.assertEquals(actual, expected);
+		System.out.println();
+	}
+	
+	@Test
+	public void printDepthFirstTest() {
+		ArrayList<c4_TreesAndGraphs.Node> result = new ArrayList<c4_TreesAndGraphs.Node>();
+		ArrayList<Integer> actual = new ArrayList<Integer>();
+		ArrayList<Integer> expected = new ArrayList<Integer>();
+		expected.add(15);
+		expected.add(9);
+		expected.add(4);
+		expected.add(5);
+		expected.add(3);
+		expected.add(7);
+		expected.add(19);
+		expected.add(12);
+		root.printDepthFirst(result);
+		
+		while(!result.isEmpty()) {
+			actual.add(result.remove(0).getVal());
+		}
+		Assert.assertEquals(actual, expected);
+		System.out.println();
+	}
 	
 	
 	@Test
 	public void printInorderTest1() {
+		ArrayList<c4_TreesAndGraphs.Node> result = new ArrayList<c4_TreesAndGraphs.Node>();
 		ArrayList<Integer> actual = new ArrayList<Integer>();
 		ArrayList<Integer> expected = new ArrayList<Integer>();
 		expected.add(5);
@@ -48,7 +94,10 @@ public class C4_00Tests {
 		expected.add(7);
 		expected.add(12);
 		
-		root.printInOrder(actual);
+		root.printInOrder(result);
+		while(!result.isEmpty()) {
+			actual.add(result.remove(0).getVal());
+		}
 		Assert.assertEquals(actual, expected);
 		System.out.println();
 	
@@ -56,6 +105,7 @@ public class C4_00Tests {
 	
 	@Test
 	public void printPreOrderTest1() {
+		ArrayList<c4_TreesAndGraphs.Node> result = new ArrayList<c4_TreesAndGraphs.Node>();
 		ArrayList<Integer> actual = new ArrayList<Integer>();
 		ArrayList<Integer> expected = new ArrayList<Integer>();
 		expected.add(15);
@@ -66,7 +116,11 @@ public class C4_00Tests {
 		expected.add(7);
 		expected.add(19);
 		expected.add(12);
-		root.printPreOrder(actual);
+		
+		root.printPreOrder(result);
+		while(!result.isEmpty()) {
+			actual.add(result.remove(0).getVal());
+		}
 		Assert.assertEquals(actual, expected);
 		System.out.println();
 	
@@ -74,6 +128,7 @@ public class C4_00Tests {
 	
 	@Test
 	public void printInorderTest3() {
+		ArrayList<c4_TreesAndGraphs.Node> result = new ArrayList<c4_TreesAndGraphs.Node>();
 		ArrayList<Integer> actual = new ArrayList<Integer>();
 		ArrayList<Integer> expected = new ArrayList<Integer>();
 		expected.add(5);
@@ -84,12 +139,13 @@ public class C4_00Tests {
 		expected.add(12);
 		expected.add(7);
 		expected.add(15);
-		root.printPostOrder(actual);
+		root.printPostOrder(result);
+		
+		while(!result.isEmpty()) {
+			actual.add(result.remove(0).getVal());
+		}
 		Assert.assertEquals(actual, expected);
-		
 		System.out.println();
-		
-		
 	
 	}
 	
