@@ -1,9 +1,9 @@
 package test.c1_StringQuestions;
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
-import c1_StringQuestions.C1_05;
+import c1_Strings.C1_05;
 
 public class C1_05Tests {
   @Test

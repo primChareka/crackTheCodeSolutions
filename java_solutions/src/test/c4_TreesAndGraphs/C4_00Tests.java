@@ -1,20 +1,18 @@
 package test.c4_TreesAndGraphs;
 
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
 import java.util.ArrayList;
 
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
-
-import c2_LinkedLists.Node;
-
 public class C4_00Tests {
-	private c4_TreesAndGraphs.Node root;
-	@BeforeMethod
+	private template.c4_TreesAndGraphs.Node root;
+	@Before
 	public void setup() {
-		c4_TreesAndGraphs.Node temp;
-		root = new c4_TreesAndGraphs.Node(15);
+		template.c4_TreesAndGraphs.Node temp;
+		root = new template.c4_TreesAndGraphs.Node(15);
 		root.insertLeft(9);
 		root.insertRight(7);
 		
@@ -37,7 +35,7 @@ public class C4_00Tests {
 	}
 	@Test
 	public void printBreadthFirstTest() {
-		ArrayList<c4_TreesAndGraphs.Node> result = new ArrayList<c4_TreesAndGraphs.Node>();
+		ArrayList<template.c4_TreesAndGraphs.Node> result = new ArrayList<template.c4_TreesAndGraphs.Node>();
 		ArrayList<Integer> actual = new ArrayList<Integer>();
 		ArrayList<Integer> expected = new ArrayList<Integer>();
 		expected.add(15);
@@ -59,7 +57,7 @@ public class C4_00Tests {
 	
 	@Test
 	public void printDepthFirstTest() {
-		ArrayList<c4_TreesAndGraphs.Node> result = new ArrayList<c4_TreesAndGraphs.Node>();
+		ArrayList<template.c4_TreesAndGraphs.Node> result = new ArrayList<template.c4_TreesAndGraphs.Node>();
 		ArrayList<Integer> actual = new ArrayList<Integer>();
 		ArrayList<Integer> expected = new ArrayList<Integer>();
 		expected.add(15);
@@ -82,7 +80,7 @@ public class C4_00Tests {
 	
 	@Test
 	public void printInorderTest1() {
-		ArrayList<c4_TreesAndGraphs.Node> result = new ArrayList<c4_TreesAndGraphs.Node>();
+		ArrayList<template.c4_TreesAndGraphs.Node> result = new ArrayList<template.c4_TreesAndGraphs.Node>();
 		ArrayList<Integer> actual = new ArrayList<Integer>();
 		ArrayList<Integer> expected = new ArrayList<Integer>();
 		expected.add(5);
@@ -105,7 +103,7 @@ public class C4_00Tests {
 	
 	@Test
 	public void printPreOrderTest1() {
-		ArrayList<c4_TreesAndGraphs.Node> result = new ArrayList<c4_TreesAndGraphs.Node>();
+		ArrayList<template.c4_TreesAndGraphs.Node> result = new ArrayList<template.c4_TreesAndGraphs.Node>();
 		ArrayList<Integer> actual = new ArrayList<Integer>();
 		ArrayList<Integer> expected = new ArrayList<Integer>();
 		expected.add(15);
@@ -128,7 +126,7 @@ public class C4_00Tests {
 	
 	@Test
 	public void printInorderTest3() {
-		ArrayList<c4_TreesAndGraphs.Node> result = new ArrayList<c4_TreesAndGraphs.Node>();
+		ArrayList<template.c4_TreesAndGraphs.Node> result = new ArrayList<template.c4_TreesAndGraphs.Node>();
 		ArrayList<Integer> actual = new ArrayList<Integer>();
 		ArrayList<Integer> expected = new ArrayList<Integer>();
 		expected.add(5);
@@ -149,7 +147,7 @@ public class C4_00Tests {
 	
 	}
 	
-	@AfterMethod
+	@After
 	public void tearDown(){
 		root = null;
 	}
