@@ -1,7 +1,6 @@
 package c4_TreesAndGraphs.in_pre_post_order;
 
 import c4_TreesAndGraphs.BinaryTreeNode;
-import c4_TreesAndGraphs.BinaryTreeStarter;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,7 +16,7 @@ import java.util.Stack;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class postOrderTraversal {
+public class PostOrderTraversal {
 
     public static List<Integer> postOrderRecursive(BinaryTreeNode treeRoot){
         ArrayList<Integer> result = new ArrayList();
@@ -102,7 +101,7 @@ public class postOrderTraversal {
     }
 
     public static void main(String[] args) {
-        Result result = JUnitCore.runClasses(postOrderTraversal.class);
+        Result result = JUnitCore.runClasses(PostOrderTraversal.class);
         for (Failure failure : result.getFailures()) {
             System.out.println(failure.toString());
         }

@@ -2,24 +2,24 @@ package c4_TreesAndGraphs;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.Queue;
 
-public class BinaryTreeNode {
+public class BinaryTreeNodeWithParent {
     public int value;
-    public BinaryTreeNode left;
-    public BinaryTreeNode right;
+    public BinaryTreeNodeWithParent left;
+    public BinaryTreeNodeWithParent right;
+    public BinaryTreeNodeWithParent parent;
 
-    public BinaryTreeNode(int value) {
+    public BinaryTreeNodeWithParent(int value) {
         this.value = value;
     }
 
-    public BinaryTreeNode insertLeft(int leftValue) {
-        this.left = new BinaryTreeNode(leftValue);
+    public BinaryTreeNodeWithParent insertLeft(int leftValue) {
+        this.left = new BinaryTreeNodeWithParent(leftValue);
         return this.left;
     }
 
-    public BinaryTreeNode insertRight(int rightValue) {
-        this.right = new BinaryTreeNode(rightValue);
+    public BinaryTreeNodeWithParent insertRight(int rightValue) {
+        this.right = new BinaryTreeNodeWithParent(rightValue);
         return this.right;
     }
 
@@ -31,24 +31,32 @@ public class BinaryTreeNode {
         this.value = value;
     }
 
-    public BinaryTreeNode getLeft() {
+    public BinaryTreeNodeWithParent getLeft() {
         return left;
     }
 
-    public void setLeft(BinaryTreeNode left) {
+    public void setLeft(BinaryTreeNodeWithParent left) {
         this.left = left;
     }
 
-    public BinaryTreeNode getRight() {
+    public BinaryTreeNodeWithParent getRight() {
         return right;
     }
 
-    public void setRight(BinaryTreeNode right) {
+    public void setRight(BinaryTreeNodeWithParent right) {
         this.right = right;
     }
 
-    public static void printBreadthFirst(BinaryTreeNode root){
-        Deque<BinaryTreeNode> q= new ArrayDeque<>();
+    public BinaryTreeNodeWithParent getParent() {
+        return parent;
+    }
+
+    public void setParent(BinaryTreeNodeWithParent parent) {
+        this.parent = parent;
+    }
+
+    public static void printBreadthFirst(BinaryTreeNodeWithParent root){
+        Deque<BinaryTreeNodeWithParent> q= new ArrayDeque<>();
         q.add(root);
         int nodesAtLevel = 1;
         int nextLevel=0;
@@ -60,7 +68,7 @@ public class BinaryTreeNode {
                 System.out.println();
             }
 
-            BinaryTreeNode current  = q.remove();
+            BinaryTreeNodeWithParent current  = q.remove();
             System.out.print(current.value + "\t");
             nodesAtLevel--;
             if(current.left!=null){
@@ -75,13 +83,5 @@ public class BinaryTreeNode {
         }
     }
 
-    @Override
-    public String toString() {
-        return "BinaryTreeNode{" +
-                "value=" + value +
-                ", left=" + left +
-                ", right=" + right +
-                '}';
-    }
 }
 

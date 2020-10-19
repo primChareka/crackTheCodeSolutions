@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 
-public class TemplateEmpty {
+public class MadeofSUbwords {
     public static class Node {
         private char val;
         private HashMap<Character, Node> children = new HashMap();
@@ -130,7 +130,7 @@ public class TemplateEmpty {
     }
 
     public static void main(String[] args) {
-        Result result = JUnitCore.runClasses(TemplateEmpty.class);
+        Result result = JUnitCore.runClasses(MadeofSUbwords.class);
         for (Failure failure : result.getFailures()) {
             System.out.println(failure.toString());
         }

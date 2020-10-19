@@ -1,7 +1,6 @@
 package c4_TreesAndGraphs.in_pre_post_order;
 
 import c4_TreesAndGraphs.BinaryTreeNode;
-import c4_TreesAndGraphs.BinaryTreeStarter;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,7 +13,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Stack;
 
-public class inOrderTraversal {
+public class InOrderTraversal {
 
     public static List<Integer> inOrderRecursive(BinaryTreeNode treeRoot){
         ArrayList<Integer> result = new ArrayList();
@@ -98,7 +97,7 @@ public class inOrderTraversal {
     }
 
     public static void main(String[] args) {
-        Result result = JUnitCore.runClasses(inOrderTraversal.class);
+        Result result = JUnitCore.runClasses(InOrderTraversal.class);
         for (Failure failure : result.getFailures()) {
             System.out.println(failure.toString());
         }

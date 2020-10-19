@@ -9,11 +9,10 @@ import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Stack;
 
-public class preOrderTraversal {
+public class PreOrderTraversal {
 
     public static List<Integer> preOrderRecursive(BinaryTreeNode treeRoot){
         ArrayList<Integer> result = new ArrayList();
@@ -103,7 +102,7 @@ public class preOrderTraversal {
 
 
     public static void main(String[] args) {
-        Result result = JUnitCore.runClasses(preOrderTraversal.class);
+        Result result = JUnitCore.runClasses(PreOrderTraversal.class);
         for (Failure failure : result.getFailures()) {
             System.out.println(failure.toString());
         }
