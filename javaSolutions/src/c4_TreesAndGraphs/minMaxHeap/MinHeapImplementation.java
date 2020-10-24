@@ -1,6 +1,5 @@
 package c4_TreesAndGraphs.minMaxHeap;
 
-import c4_TreesAndGraphs.BinaryTreeNode;
 import c4_TreesAndGraphs.BinaryTreeNodeWithParent;
 import org.junit.Test;
 import org.junit.runner.JUnitCore;
@@ -11,7 +10,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class MinHeapImplementation {
-    public static class MinHeap {
+    private static class MinHeap {
         private static BinaryTreeNodeWithParent root;
 
         private static BinaryTreeNodeWithParent getNextParent() {
@@ -242,11 +241,11 @@ public class MinHeapImplementation {
         MinHeap.insert(node6);
         MinHeap.insert(node7);
 
-        BinaryTreeNodeWithParent.printBreadthFirst(MinHeap.root);
+//        BinaryTreeNodeWithParent.printBreadthFirst(MinHeap.root);
     }
 
     public static void main(String[] args) {
-        Result result = JUnitCore.runClasses(BinaryTreeNode.class);
+        Result result = JUnitCore.runClasses(MinHeapImplementation.class);
         for (Failure failure : result.getFailures()) {
             System.out.println(failure.toString());
         }
